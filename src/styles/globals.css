@@ -1,0 +1,99 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --bg: #f7fafc;
+  --bg-accent: #edf2f7;
+  --text: #2d3748;
+  --text-accent: #4a5568;
+  --border: #e2e8f0;
+  --border-accent: #cbd5e0;
+  --code: #2d3748;
+  --code-bg: #f7fafc;
+  --code-border: #cbd5e0;
+}
+:root.dark {
+  --bg: #141414;
+  --bg-accent: #1a1a1a;
+  --text: #e2e8f0;
+  --text-accent: #cbd5e0;
+  --border: #3b3b3b;
+  --border-accent: #2d3748;
+  --code: #cbd5e0;
+  --code-bg: #2d3748;
+  --code-border: #4a5568;
+}
+
+body {
+  background-color: var(--bg);
+  color: var(--text);
+  height: 100vh;
+}
+
+@keyframes rainbow-wave {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.rainbow-wave {
+  background: linear-gradient(
+    to right,
+    #ff1cf7,
+    #ff705b,
+    #5ea2ef,
+    #00b7fa,
+    #6fee8d,
+    #ff72e1
+  );
+
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  background-size: 600% 100%;
+  animation: rainbow-wave 3s ease infinite;
+  font-weight: 600;
+  display: inline-block;
+}
+
+.ring-offset-background {
+  --tw-ring-offset-color: var(--bg);
+}
+
+.navbar_item_hover {
+  position: relative;
+}
+
+.navbar_item_hover::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background-color: rgb(62, 168, 47);
+  transition: width 0.3s ease;
+  border-radius: 999px;
+}
+
+.navbar_item_hover:hover::after {
+  width: 100%;
+}
+
+.footer {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  background-color: var(--bg-accent);
+}
+
+.button-glow {
+  @apply inline-flex justify-center whitespace-nowrap rounded-full px-3.5 py-2.5 text-sm font-medium text-slate-200 dark:text-slate-800 bg-gradient-to-r from-slate-800 to-slate-700 dark:from-slate-200 dark:to-slate-100 dark:hover:bg-slate-100 shadow focus:outline-none focus:ring focus:ring-slate-500/50 focus-visible:outline-none focus-visible:ring focus-visible:ring-slate-500/50 relative before:absolute before:inset-0 before:rounded-[inherit] before:bg-[linear-gradient(45deg,transparent_25%,theme(colors.white/.5)_50%,transparent_75%,transparent_100%)] dark:before:bg-[linear-gradient(45deg,transparent_25%,theme(colors.white)_50%,transparent_75%,transparent_100%)] before:bg-[length:250%_250%,100%_100%] before:bg-[position:200%_0,0_0] before:bg-no-repeat before:[transition:background-position_0s_ease] hover:before:bg-[position:-100%_0,0_0] hover:before:duration-[1500ms];
+}

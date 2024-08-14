@@ -1,0 +1,41 @@
+[{
+    "name": "JavaScript",
+    "image": "https://pub-310a2360dab34aa8a9c722a4c2cbe6dc.r2.dev/JavaScript-logo.png",
+    "time": "4 years",
+    "link": "https://developer.mozilla.org/en-US/docs/Web/JavaScript"
+}, {
+    "name": "Node.js",
+    "image": "https://pub-310a2360dab34aa8a9c722a4c2cbe6dc.r2.dev/nodejs-logo-FBE122E377-seeklogo.com.png",
+    "time": "4 years",
+    "link": "https://nodejs.org/en/"
+}, {
+    "name": "Express.js",
+    "image": "https://pub-310a2360dab34aa8a9c722a4c2cbe6dc.r2.dev/kisspng-express-js-node-js-javascript-mongodb-node-js-5b461d28173fc6.1251392115313216400952.jpg",
+    "time": "3.5 years",
+    "link": "https://expressjs.com/"
+}, {
+    "name": "React.js",
+    "image": "https://pub-310a2360dab34aa8a9c722a4c2cbe6dc.r2.dev/React-icon.svg.png",
+    "time": "2.2 years",
+    "link": "https://reactjs.org/"
+}, {
+    "name": "Next.js",
+    "image": "https://pub-310a2360dab34aa8a9c722a4c2cbe6dc.r2.dev/next-js.svg",
+    "time": "2.2 years",
+    "link": "https://nextjs.org/"
+}, {
+    "name": "HTML5",
+    "image": "https://pub-310a2360dab34aa8a9c722a4c2cbe6dc.r2.dev/html-1.svg",
+    "time": "4 years",
+    "link": "https://developer.mozilla.org/en-US/docs/Web/Guide/HTML/HTML5"
+}, {
+    "name": "CSS3",
+    "image": "https://pub-310a2360dab34aa8a9c722a4c2cbe6dc.r2.dev/CSS3_logo.svg.png",
+    "time": "4 years",
+    "link": "https://developer.mozilla.org/en-US/docs/Web/CSS"
+}, {
+    "name": "TypeScript",
+    "image": "https://pub-310a2360dab34aa8a9c722a4c2cbe6dc.r2.dev/2945272.webp",
+    "time": "1 year",
+    "link": "https://www.typescriptlang.org/"
+}]
