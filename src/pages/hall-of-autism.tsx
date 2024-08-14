@@ -6,8 +6,13 @@ import cards from "@/Components/page/tism/people.json";
 export default function Page() {
   const [searchTerm, setSearchTerm] = React.useState("");
   const [currentPage, setCurrentPage] = React.useState(1);
-  const [itemsPerPage, setItemsPerPage] = React.useState(getItemsPerPage());
+  const [itemsPerPage, setItemsPerPage] = React.useState(2);
 
+  React.useEffect(() => {
+    if (typeof window !== "undefined") {
+      setItemsPerPage(getItemsPerPage());
+    }
+  }, []);
 
   const filteredCards = cards.filter((card) =>
     card.name.toLowerCase().includes(searchTerm.toLowerCase())
@@ -24,18 +29,21 @@ export default function Page() {
   }, [searchTerm]);
 
   function getItemsPerPage() {
+    if (typeof window === "undefined") return 2; // Default for SSR or undefined window
     const width = window.innerWidth;
     if (width >= 640) return 3;
     return 2;
   }
 
   React.useEffect(() => {
-    const handleResize = () => {
-      setItemsPerPage(getItemsPerPage());
-    };
+    if (typeof window !== "undefined") {
+      const handleResize = () => {
+        setItemsPerPage(getItemsPerPage());
+      };
 
-    window.addEventListener("resize", handleResize);
-    return () => window.removeEventListener("resize", handleResize);
+      window.addEventListener("resize", handleResize);
+      return () => window.removeEventListener("resize", handleResize);
+    }
   }, []);
 
   return (
